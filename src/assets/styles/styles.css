@@ -1,0 +1,19 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  caret-color: transparent;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/* .container {
+
+} */
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
