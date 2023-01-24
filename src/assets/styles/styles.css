@@ -9,9 +9,11 @@ body {
   box-sizing: border-box;
 }
 
-/* .container {
-
-} */
+.container {
+  width: 80%;
+  background-color: rgb(44, 120, 124);
+  margin: 20px auto;
+}
 
 .books-grid {
   display: grid;
