@@ -6,6 +6,16 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+::selection {
+  color: none;
+  background-color: #f1e0e0;
+}
+
+::-moz-selection {
+  color: none;
+  background-color: #f1e0e0;
+}
+
 button {
   font-family: 'Open Sans', sans-serif;
 }
@@ -92,4 +102,59 @@ footer div a {
 .page {
   text-align: center;
   margin: auto;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  margin-top: 50px;
+}
+
+.intro-title {
+  font-size: 2.5rem;
+}
+
+.random-books-selection {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.random-books-selection-info {
+  width: 470px;
+}
+
+.random-books-selection-text {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.random-books-selection-btn {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 10px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 1px dashed #46467b;
+  -webkit-box-shadow: 3px 12px 15px 5px #f1e0e0; 
+  box-shadow: -1px 12px 15px 5px #f1e0e0;
+  transition: all 0.2s;
+}
+
+.random-books-selection-btn:hover {
+  transform: translateY(-2%);
+  box-shadow: none;
+}
+
+.random-books-selection-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
 }

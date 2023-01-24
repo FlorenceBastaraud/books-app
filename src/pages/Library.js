@@ -2,7 +2,7 @@
 function Library(){
   return (
       <div className="page library">
-        <h1>Library</h1>
+        <h1>Bibliotèque</h1>
       </div>
   )
 }

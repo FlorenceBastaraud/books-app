@@ -4,19 +4,21 @@ import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
 import Library from "./pages/Library";
 import Favorites from "./pages/Favorites";
+import BloomBookSelection from "./pages/BloomBookSelection";
 
 export default function App() {
 
   return (
-    <div className="container">
+    <main className="container">
       <Header/>
       <Routes>
         <Route exact path="/" element={<Homepage/>}/>
+        <Route path="/bloombook-selection" element={<BloomBookSelection/>}/>
         <Route path="/library" element={<Library/>}/>
         <Route path="/favorites" element={<Favorites/>}/>
       </Routes>
       <Footer/>
-    </div>
+    </main>
   );
 }
 
