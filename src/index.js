@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router} from 'react-router-dom';
 import "./assets/styles/styles.css";
 import App from './App';
-import { ContextBooksProvider } from './Context/ContextBooks';
+import { ContextBooksProvider } from './context/ContextBooks';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

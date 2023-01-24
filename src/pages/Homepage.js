@@ -2,8 +2,8 @@
 
 function Homepage(){
   return (
-      <div>
-        <h1>This is the grid cover Homepage</h1>
+      <div className="page homepage">
+        <h1>Homepage</h1>
       </div>
   )
 }
