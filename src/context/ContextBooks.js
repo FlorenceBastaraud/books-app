@@ -4,6 +4,8 @@ const ContextBooks = React.createContext()
 function ContextBooksProvider({children}){
   const [allBooks, setAllBooks] = useState([])
   const [randomBooks, setRandomBooks] = useState([]) 
+  const [favorites, setFavorites] = useState([])
+  const [selectedBooks, setSelectedBooks] = useState([])
 
   useEffect(() => {
     async function fetchAllBooks(){
@@ -26,6 +28,7 @@ function ContextBooksProvider({children}){
     const bookToPick = allBooks.find(book => book.id === idToPick)
     if(selection.every(book => book.id !== idToPick)){
       selection.push(bookToPick)
+      setSelectedBooks(prev => [...prev, bookToPick])
     }
     return getRandomBooks(selection, i-1)
   }
@@ -34,8 +37,29 @@ function ContextBooksProvider({children}){
     setRandomBooks(getRandomBooks())
   }
 
+
+  function addToFavorites(book){
+    setFavorites(prev => [...prev, book])
+  }
+
+  function selectBook(id){
+    if(selectedBooks.every(book => book.id !== id)){
+      setSelectedBooks(prev => [...prev, randomBooks.find(book => book.id === id)])
+    } else {
+      setSelectedBooks(prev => prev.filter(book => book.id !== id))
+    }
+  }
+
+
   return (
-    <ContextBooks.Provider value={{allBooks, randomBooks, bloomBlookFunc}}>
+    <ContextBooks.Provider value={{
+          allBooks, 
+          randomBooks, 
+          bloomBlookFunc, 
+          addToFavorites,
+          selectBook, 
+          selectedBooks
+      }}> 
       {children}
     </ContextBooks.Provider>
   )

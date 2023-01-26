@@ -6,6 +6,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+:root {
+  accent-color: #46467b;
+}
+
 ::selection {
   color: none;
   background-color: #f1e0e0;
@@ -156,7 +160,7 @@ footer div a {
   margin-top: 35px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 10px;
+  column-gap: 5px;
 }
 
 /* .bloombookselection-title {
@@ -207,6 +211,32 @@ footer div a {
 
 .random-book-card:hover .random-book-card-cta {
   opacity: 1;
+}
+
+.random-book-card-checkbox {
+  position: absolute;
+  bottom: -3.5em;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.add-random-books-to-favorites {
+  color: #46467b;
+  border-color: 1px solid #000;
+  background-color: #e0dcdc;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+.add-random-books-to-favorites:hover {
+  transform: translateY(2%);
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000;
 }
 
 
