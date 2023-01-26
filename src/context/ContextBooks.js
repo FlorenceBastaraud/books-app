@@ -34,12 +34,15 @@ function ContextBooksProvider({children}){
   }
 
   function bloomBlookFunc(){
+    setSelectedBooks([])
     setRandomBooks(getRandomBooks())
   }
 
 
   function addToFavorites(book){
-    setFavorites(prev => [...prev, book])
+    if(favorites.every(fav => fav.id !== book.id)){
+      setFavorites(prev => [...prev, book])
+    }
   }
 
   function selectBook(id){
@@ -58,7 +61,8 @@ function ContextBooksProvider({children}){
           bloomBlookFunc, 
           addToFavorites,
           selectBook, 
-          selectedBooks
+          selectedBooks,
+          favorites
       }}> 
       {children}
     </ContextBooks.Provider>

@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import Library from "./pages/Library";
 import Favorites from "./pages/Favorites";
 import BloomBookSelection from "./pages/BloomBookSelection";
+import BookDetails from "./pages/BookDetails"
 
 export default function App() {
 
@@ -14,7 +15,8 @@ export default function App() {
       <Routes>
         <Route exact path="/" element={<Homepage/>}/>
         <Route path="/bloombook-selection" element={<BloomBookSelection/>}/>
-        <Route path="/library" element={<Library/>}/>
+        <Route exact path="/library" element={<Library/>}/>
+        <Route path="/library/:id" element={<BookDetails/>}/>
         <Route path="/favorites" element={<Favorites/>}/>
       </Routes>
       <Footer/>

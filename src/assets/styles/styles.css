@@ -6,6 +6,15 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+button:disabled, button:disabled:hover {
+  background-color: rgb(187, 187, 187);
+  color: linen;
+  opacity: 1;
+  transform: none;
+  cursor: not-allowed;
+}
+
+
 :root {
   accent-color: #46467b;
 }
@@ -183,14 +192,11 @@ footer div a {
 }
 
 .random-book-card-cta {
+  margin-top: 50px;
   position: absolute;
   opacity: 0;
-  pointer-events: none;
   -webkit-transition: opacity 0.5s linear; 
   transition: opacity 0.5s linear;
-}
-
-.random-book-card-cta {
   background-color: rgba(0, 0, 0);
   color: #fff;
   padding: 10px 20px;
@@ -200,14 +206,15 @@ footer div a {
   font-weight: bold;
 }
 
+.random-book-card-cta a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .random-book-card:hover {
   cursor: pointer;
 }
 
-.random-book-card:hover .random-book-card-img {
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-}
 
 .random-book-card:hover .random-book-card-cta {
   opacity: 1;
