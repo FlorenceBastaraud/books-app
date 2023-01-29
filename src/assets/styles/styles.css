@@ -249,6 +249,12 @@ footer div a {
 .bd-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  padding: 20px;
+  height: 550px;
+  width: 80%;
+  margin: 0 auto;
+  overflow: scroll;
 }
 
 .book-details {
@@ -256,10 +262,10 @@ footer div a {
 }
 
 .bd-cover {
-
+  display: flex;
+  justify-content: center;
 }
 
 .bd-cover img {
-  width: 100%;
 }
 
