@@ -9,7 +9,7 @@ function Homepage(){
   return (
       <section className="page homepage">
         <div className="intro">
-          <h1 className="intro-title">Bienvenue dans votre librairie virtuelle</h1>
+          <h1 className="intro-title">Bienvenue dans votre bibliotèque virtuelle</h1>
           <h3 className="intro-subtitle">LibraryBlooms est un coin dédié à la découverte et redécouverte de livres tous genres confondus.</h3>
         </div>
         <div className="random-books-selection">

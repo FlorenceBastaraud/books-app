@@ -246,4 +246,20 @@ footer div a {
   color: #000;
 }
 
+.bd-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.book-details {
+
+}
+
+.bd-cover {
+
+}
+
+.bd-cover img {
+  width: 100%;
+}
 
