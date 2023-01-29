@@ -117,6 +117,10 @@ footer div a {
   margin: auto;
 }
 
+.library, .favorites {
+  overflow-y: scroll;
+}
+
 .homepage {
   display: flex;
   flex-direction: column;
