@@ -252,7 +252,7 @@ footer div a {
 
 .bd-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 30px 1fr 1fr;
   column-gap: 20px;
   padding: 20px;
   height: 550px;
@@ -261,8 +261,28 @@ footer div a {
   overflow: scroll;
 }
 
+.bd-container aside {
+  
+}
+
+
+.bd-container aside .go-back-icon {
+  width: 2em;
+  height: 2em;
+}
+
 .book-details {
 
+}
+
+.bd-title-favorite {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favorite-icon {
+  width: 2em;
+  height: 2em;
 }
 
 .bd-cover {

@@ -1,26 +1,41 @@
 import { useParams, useNavigate } from "react-router-dom"
 import { ContextBooks } from "../context/ContextBooks"
-import { useContext } from "react"
+import { useContext, useState } from "react"
+import {AiOutlineStar, AiFillStar, AiOutlineArrowLeft} from "react-icons/ai"
 
 function BookDetails(){
   const navigate = useNavigate()
   const {id} = useParams()
-  const {allBooks, addToFavorites, favorites} = useContext(ContextBooks)
+  const {allBooks, toggleFavorite} = useContext(ContextBooks)
+  const [isFav, setIsFav] = useState(false)
+  
 
-  console.log(favorites);
 
-  const theBookDetails = allBooks.find(book => book.id === parseInt(id))
+  function handleClick(){
+    toggleFavorite(theBookDetails)
+    setIsFav(prev => !prev)
+  }
 
   function goBack(){
     navigate(-1)
   }
-  
+
+
+
+  const theBookDetails = allBooks.find(book => book.id === parseInt(id))
+
+  const favIcon = isFav ? <AiFillStar onClick={handleClick} className="favorite-icon"/> : <AiOutlineStar  onClick={handleClick} className="favorite-icon"/>
+
   const {title, authors, description, image_url, rating, rating_count, num_pages, genres, Quote1} = theBookDetails
 
   return (
     <div className="bd-container">
+      <aside><AiOutlineArrowLeft className="go-back-icon" onClick={goBack}/></aside>
       <div className="book-details">
+        <div className="bd-title-favorite">
         <h2 className="bd-title">{title}</h2>
+        {favIcon}
+        </div>
         <h3 className="bd-authors">{authors}</h3>
         <div className="bd-stats">
           <span>{rating}</span><span> | {rating_count} notes</span>
@@ -33,10 +48,6 @@ function BookDetails(){
       </div>
       <div className="bd-cover">
       <img src={image_url} alt={`Book cover of ${title}`}/>
-      </div>
-      <div className="actions">
-        <button onClick={() => addToFavorites(theBookDetails)}>Ajouter aux favoris</button>
-        <button onClick={goBack}>Retour</button>
       </div>
     </div>
   )

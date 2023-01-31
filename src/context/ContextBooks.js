@@ -45,6 +45,14 @@ function ContextBooksProvider({children}){
     }
   }
 
+  function toggleFavorite(book){
+    if(favorites.every(fav => fav.id !== book.id)){
+      setFavorites(prev => [...prev, book])
+    } else {
+      setFavorites(prev => prev.filter(fav => fav.id !== book.id))
+    }
+  }
+
   function selectBook(id){
     if(selectedBooks.every(book => book.id !== id)){
       setSelectedBooks(prev => [...prev, randomBooks.find(book => book.id === id)])
@@ -62,7 +70,8 @@ function ContextBooksProvider({children}){
           addToFavorites,
           selectBook, 
           selectedBooks,
-          favorites
+          favorites,
+          toggleFavorite
       }}> 
       {children}
     </ContextBooks.Provider>
