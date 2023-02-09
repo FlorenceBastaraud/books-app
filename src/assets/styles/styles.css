@@ -35,7 +35,7 @@ button {
 
 body {
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -169,7 +169,7 @@ footer div a {
   box-shadow: none;
 }
 
-.random-books-selection-grid,  {
+.random-books-selection-grid, .favorites-grid, .library-grid {
   margin-top: 35px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
