@@ -5,13 +5,19 @@ function Favorites(){
   const {favorites} = useContext(ContextBooks)
 
   const favBooksElements = favorites.map(book => (
-    <div key={book.id}>{book.title} | {book.authors}</div>
+    <div key={book.id}>
+      <img src={book.image_url} alt={book.title}/>
+      <p>{book.title}</p>
+      <p>{book.authors}</p>
+    </div>
   ))
 
   return (
       <div className="page favorites">
         <h1>Mes Favoris</h1>
-        {favBooksElements}
+        <div className="favorites-grid">
+          {favBooksElements}
+        </div>
       </div>
   )
 }

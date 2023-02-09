@@ -1,10 +1,11 @@
 import BloomBookItem from "../components/BloomBlookItem"
 import { ContextBooks } from "../context/ContextBooks"
-import { useContext, useRef, useEffect } from "react"
+import { useContext, useRef, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 function BloomBookSelection(){
   const {randomBooks, selectedBooks, addToFavorites} = useContext(ContextBooks)
+  const [selectedCount, setSelectedCount] = useState(0)
   const btnRef = useRef(null)
 
   const randomBooksElements = randomBooks.map(book => (
@@ -17,7 +18,10 @@ function BloomBookSelection(){
     } else {
       btnRef.current.disabled = false
     }
-  }, [btnRef, selectedBooks])
+
+    setSelectedCount(selectedBooks.length)
+
+  }, [btnRef, selectedBooks, selectedCount])
 
 
   function handleClick(){
@@ -32,7 +36,7 @@ function BloomBookSelection(){
       {randomBooksElements}
       </div>
       <Link to="/favorites">
-        <button ref={btnRef} className="add-random-books-to-favorites" onClick={handleClick}>Ajouter aux favoris &#40;{selectedBooks.length}&#41;</button>
+        <button ref={btnRef} className="add-random-books-to-favorites" onClick={handleClick}>Ajouter aux favoris &#40;{selectedCount}&#41;</button>
       </Link>
     </section>
   )
