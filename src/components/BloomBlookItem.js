@@ -1,12 +1,12 @@
 import PropTypes from "prop-types"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { ContextBooks } from "../context/ContextBooks"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
 
 function BloomBookItem({book}){
-  const {selectBook} = useContext(ContextBooks)
+  const {selectBook, selectedBooks} = useContext(ContextBooks)
   const {id, title, image_url} = book
   const [isChecked, setIsChecked] = useState(true)
 
@@ -15,6 +15,14 @@ function BloomBookItem({book}){
     selectBook(id)
     setIsChecked(prev => !prev)
   }
+
+  useEffect(() => {
+    if(selectedBooks.find(sbook => sbook.id === id)){
+      setIsChecked(true)
+    } else {
+      setIsChecked(false)
+    }
+  }, [selectedBooks, id])
 
 
 
