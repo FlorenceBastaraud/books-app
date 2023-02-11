@@ -5,12 +5,13 @@ import { Link } from "react-router-dom"
 
 function BloomBookSelection(){
   const {randomBooks, selectedBooks, addToFavorites} = useContext(ContextBooks)
-  const [selectedCount, setSelectedCount] = useState(0)
+  const [styles, setStyles] = useState("")
   const btnRef = useRef(null)
 
   const randomBooksElements = randomBooks.map(book => (
     <BloomBookItem key={book.id} book={book}/>
   ))
+
 
   useEffect(() => {
     if(selectedBooks.length === 0){
@@ -19,9 +20,13 @@ function BloomBookSelection(){
       btnRef.current.disabled = false
     }
 
-    setSelectedCount(selectedBooks.length)
 
-  }, [btnRef, selectedBooks, selectedCount])
+  }, [btnRef, selectedBooks])
+
+  useEffect(() => {
+    setStyles(`grid-template-columns: repeat(${randomBooks.length}, 1fr)`)
+  }, [randomBooks])
+
 
 
   function handleClick(){
@@ -30,7 +35,7 @@ function BloomBookSelection(){
 
 
   return (
-    <section className="page bloom-book-selection">
+    <section className="page bloom-book-selection" style={{styles}}>
       <h1 className="bloombookselection-title">Sélection BloomBook</h1>
       <div className="random-books-selection-grid">
       {randomBooksElements}
