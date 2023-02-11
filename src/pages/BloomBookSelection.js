@@ -36,7 +36,7 @@ function BloomBookSelection(){
       {randomBooksElements}
       </div>
       <Link to="/favorites">
-        <button ref={btnRef} className="add-random-books-to-favorites" onClick={handleClick}>Ajouter aux favoris &#40;{selectedCount}&#41;</button>
+        <button ref={btnRef} className="add-random-books-to-favorites" onClick={handleClick}>Ajouter aux favoris &#40;{selectedBooks.length}&#41;</button>
       </Link>
     </section>
   )

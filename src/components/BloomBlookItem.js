@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 
 function BloomBookItem({book}){
-  const {selectBook, selectedBooks} = useContext(ContextBooks)
+  const {filterRandomBooks, selectBook, selectedBooks} = useContext(ContextBooks)
   const {id, title, image_url} = book
   const [isChecked, setIsChecked] = useState(true)
 
@@ -23,6 +23,12 @@ function BloomBookItem({book}){
       setIsChecked(false)
     }
   }, [selectedBooks, id])
+  
+
+  useEffect(() => {
+    filterRandomBooks(id)
+  }, [filterRandomBooks, id])
+
 
 
 
