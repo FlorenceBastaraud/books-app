@@ -44,7 +44,7 @@ h1 {
 
 .container {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #f7f8ff;
   margin: auto;
   padding: 100px;
@@ -70,6 +70,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
 }
 
 header ul {
@@ -117,9 +118,9 @@ footer div a {
   margin: auto;
 }
 
-.library, .favorites {
+/* .library, .favorites {
   overflow-y: scroll;
-}
+} */
 
 .homepage {
   display: flex;
@@ -182,7 +183,7 @@ footer div a {
 
 .random-book-card {
   width: 100%;
-  height: 80%;
+  height: auto;
   display: flex;
   padding: 30px;
   flex-direction: column;
@@ -192,7 +193,8 @@ footer div a {
 }
 
 .random-book-card-img {
-  width: 80%;
+  width: 60%;
+  height: auto;
 }
 
 .random-book-card-cta {

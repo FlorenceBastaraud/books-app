@@ -24,7 +24,7 @@ function BloomBookSelection(){
   }, [btnRef, selectedBooks])
 
   useEffect(() => {
-    setStyles(`grid-template-columns: repeat(${randomBooks.length}, 1fr)`)
+    setStyles(`gridTemplateColumns: repeat(${randomBooks.length}, 1fr)`)
   }, [randomBooks])
 
 
