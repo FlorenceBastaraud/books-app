@@ -1,10 +1,14 @@
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 function Footer(){
+
+  let getDate = new Date();
+  let getDateYear = getDate.getFullYear();
+  
   return (
       <footer>
         <div>
-          <a href="https://florenceb.fr" target="_blank" rel="noreferrer">
+          <a href="https://florence-b.com" target="_blank" rel="noreferrer">
             <small>2023 &copy; Florence Bastaraud</small>
           </a>
           <span>|</span>

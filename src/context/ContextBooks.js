@@ -68,6 +68,23 @@ function ContextBooksProvider({children}){
     }
   }
 
+
+  function localStorageState(favorites){
+    let localStFavoriteBooks = localStorage.setItem('favoritesBooks', JSON.stringify(favorites));
+    return localStFavoriteBooks;
+  }
+
+  function getLocalStorageState(){
+    let getLocalStFavoriteBooks = JSON.parse(localStorage.getItem('favoritesBooks'));
+    return getLocalStFavoriteBooks;
+  }
+
+  localStorageState(favorites);
+
+  if(Object.keys(favorites).length > 1){
+    console.log(getLocalStorageState());
+  }
+
   return (
     <ContextBooks.Provider value={{
           allBooks, 

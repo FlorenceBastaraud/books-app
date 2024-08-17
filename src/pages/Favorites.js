@@ -5,7 +5,7 @@ function Favorites(){
   const {favorites} = useContext(ContextBooks)
 
   const favBooksElements = favorites.map(book => (
-    <div key={book.id}>
+    <div className="favorites-grid-item" key={book.id}>
       <img src={book.image_url} alt={book.title}/>
       <p>{book.title}</p>
       <p>{book.authors}</p>
