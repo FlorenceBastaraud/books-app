@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/FlorenceBastaraud/libraryblooms/static/css/main.758199fd.css",
-    "main.js": "/FlorenceBastaraud/libraryblooms/static/js/main.25b75408.js",
-    "index.html": "/FlorenceBastaraud/libraryblooms/index.html",
-    "main.758199fd.css.map": "/FlorenceBastaraud/libraryblooms/static/css/main.758199fd.css.map",
-    "main.25b75408.js.map": "/FlorenceBastaraud/libraryblooms/static/js/main.25b75408.js.map"
+    "main.css": "/libraryblooms/static/css/main.758199fd.css",
+    "main.js": "/libraryblooms/static/js/main.25b75408.js",
+    "index.html": "/libraryblooms/index.html",
+    "main.758199fd.css.map": "/libraryblooms/static/css/main.758199fd.css.map",
+    "main.25b75408.js.map": "/libraryblooms/static/js/main.25b75408.js.map"
   },
   "entrypoints": [
     "static/css/main.758199fd.css",
