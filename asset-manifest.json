@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/libraryblooms/static/css/main.758199fd.css",
-    "main.js": "/libraryblooms/static/js/main.88b19d4a.js",
+    "main.js": "/libraryblooms/static/js/main.f4c52a35.js",
     "index.html": "/libraryblooms/index.html",
     "main.758199fd.css.map": "/libraryblooms/static/css/main.758199fd.css.map",
-    "main.88b19d4a.js.map": "/libraryblooms/static/js/main.88b19d4a.js.map"
+    "main.f4c52a35.js.map": "/libraryblooms/static/js/main.f4c52a35.js.map"
   },
   "entrypoints": [
     "static/css/main.758199fd.css",
-    "static/js/main.88b19d4a.js"
+    "static/js/main.f4c52a35.js"
   ]
 }
