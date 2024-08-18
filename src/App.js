@@ -1,5 +1,5 @@
-import {Routes, Route} from "react-router-dom"
-import Header from "./components/Header"
+import {Routes, Route, HashRouter} from "react-router-dom";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
 import Library from "./pages/Library";
@@ -13,7 +13,7 @@ export default function App() {
     <main className="container">
       <Header/>
       <Routes>
-        <Route exact path="/libraryblooms" element={<Homepage/>}/>
+        <Route exact path="/" element={<Homepage/>}/>
         <Route path="/bloombook-selection" element={<BloomBookSelection/>}/>
         <Route exact path="/library" element={<Library/>}/>
         <Route path="/library/:id" element={<BookDetails/>}/>

@@ -1,10 +1,6 @@
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
-function Footer(){
-
-  let getDate = new Date();
-  let getDateYear = getDate.getFullYear();
-  
+function Footer(){  
   return (
       <footer>
         <div>
