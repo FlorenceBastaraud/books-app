@@ -13,7 +13,7 @@ export default function App() {
     <main className="container">
       <Header/>
       <Routes>
-        <Route exact path="/" element={<Homepage/>}/>
+        <Route exact path="/libraryblooms" element={<Homepage/>}/>
         <Route path="/bloombook-selection" element={<BloomBookSelection/>}/>
         <Route exact path="/library" element={<Library/>}/>
         <Route path="/library/:id" element={<BookDetails/>}/>
