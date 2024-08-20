@@ -37,10 +37,10 @@ function BloomBookSelection(){
   return (
     <section className="page bloom-book-selection" style={{styles}}>
       <h1 className="bloombookselection-title">Sélection BloomBook</h1>
-      <div className="random-books-selection-grid">
+      <div className="random-books-selection-grid books-grid">
       {randomBooksElements}
       </div>
-      <Link to="/favorites">
+      <Link to="/favorites" className="bloombookselection-cta">
         <button ref={btnRef} className="add-random-books-to-favorites" onClick={handleClick}>Ajouter aux favoris &#40;{selectedBooks.length}&#41;</button>
       </Link>
     </section>
