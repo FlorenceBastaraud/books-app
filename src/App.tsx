@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 
 import { ContextBooksProvider } from './context/ContextBooks'
 
@@ -13,7 +13,7 @@ import Goodbye from './views/Goodbye'
 function App() {
   return (
     <ContextBooksProvider>
-      <BrowserRouter basename="{process.env.PUBLIC_URL}">
+      <HashRouter>
         <Header />
 
         <Routes>
@@ -24,7 +24,7 @@ function App() {
         </Routes>
 
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </ContextBooksProvider>
   )
 }
