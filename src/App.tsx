@@ -13,7 +13,7 @@ import Goodbye from './views/Goodbye'
 function App() {
   return (
     <ContextBooksProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="{process.env.PUBLIC_URL}">
         <Header />
 
         <Routes>
