@@ -1,0 +1,89 @@
+.selection
+
+  &__wrapper
+    text-align: center
+    padding: toEm(30, 20)
+
+    &--title
+      font-style: italic
+
+      span
+        color: $secondaryColor
+
+    &--description
+      font-style: italic
+
+    &--books
+      margin-top: toRem(20)
+      width: 100%
+      @include display-flex(column, center, center)
+      gap: toRem(40)
+
+      .no-books
+        text-align: center
+
+    &--send
+      @include display-flex(column, center, center)
+      gap: toRem(30)
+      margin-top: toRem(20)
+
+      .emails-form
+
+        label
+          padding: toEm(8)
+
+        input
+          padding: toEm(8, 30)
+          border-radius: 4px
+          background-color: transparent
+          border: none
+          outline: none
+          color: $primaryColor
+
+        button
+          border: none
+          background: none
+          color: $primaryColor
+          padding: toEm(8)
+
+      .emails-list
+        @include display-flex(column, center, center)
+
+        li
+          font-style: italic
+          font-size: toRem(13)
+
+      .emails-message
+        width: 100%
+        min-height: 220px
+        padding: toEm(8, 20)
+        background-color: transparent
+        border: none
+        outline: none
+        color: $primaryColor
+
+        &:focus
+          background-color: $primaryColor
+          color: $primaryBgColor
+        
+
+      .emails-send-list
+        border: none
+        outline: none
+        background: none
+        color: $primaryColor
+        transition: .3s ease-out
+        cursor: pointer
+
+        &:hover
+          scale: 1.1
+
+
+
+
+
+
+
+
+
+

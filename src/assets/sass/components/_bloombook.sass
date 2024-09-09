@@ -1,0 +1,18 @@
+.bloombook
+  @include display-flex(row, space-evenly, center)
+  gap: toRem(10)
+  text-decoration: none
+  background: none
+  padding: toEm(10, 30)
+  border-radius: toRem(4)
+  cursor: pointer
+  color: $primaryColor
+  box-shadow: 0px 2px 2px 2px $primaryColor
+  border: 1px solid $primaryColor
+  transition: .2s ease-in-out
+
+  &:hover
+    scale: 1.015
+    border: 1px dashed $secondaryColor
+    box-shadow: -1px 6px 8px 1px $secondaryColor
+    

@@ -1,0 +1,57 @@
+@import './utils/variables'
+@import './utils/functions'
+@import './utils/mixins'
+@import './utils/keyframes'
+@import './utils/classes'
+  
+@import './components/header'
+@import './components/footer'
+@import './components/bloombook'
+@import './components/selectgenres'
+@import './components/bookitem'
+
+@import './views/404'
+@import './views/home'
+@import './views/selection'
+@import './views/goodbye'
+
+  
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  box-sizing: inherit
+  font-family: inherit
+
+html
+  box-sizing: border-box
+  width: 100%
+  height: auto
+  font-family: $textFont
+
+body
+  width: 100%
+
+::selection
+  background-color: $secondaryColor
+  color: $primaryBgColor
+
+#root
+  width: 100%
+  min-height: 100vh
+  @include display-flex(column, space-between, center)
+  background-color: $primaryBgColor
+  color: $primaryColor
+
+a
+  font-family: $textFont
+  color: $primaryColor
+
+ul
+  list-style-type: none
+
+main
+  width: 100%
+  height: fit-content
+  @include display-flex(row, center, center)
+  margin: auto
+

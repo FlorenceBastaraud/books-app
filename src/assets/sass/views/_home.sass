@@ -1,0 +1,43 @@
+.home
+
+  &__wrapper
+    text-align: center
+
+    &--title
+      font-style: italic
+      letter-spacing: toEm(1)
+
+      span
+        color: $secondaryColor
+
+    &--description
+      font-style: italic
+      max-width: 500px
+
+      @include media-query(520px)
+        max-width: 100%
+
+    &--loader
+      width: 100%
+      @include display-flex(row, center, center)
+
+    &--bloombook
+      margin-top: toRem(10)
+
+      &[disabled]
+        pointer-events: none
+        scale: 0.85
+        border: 1px dashed $thirdColor
+        box-shadow: -1px 1px 1px 1px $thirdColor
+        background-color: $secondaryBgColor
+        color: $primaryBgColor
+
+    &--select-genres
+      width: 100%
+
+
+
+
+
+
+

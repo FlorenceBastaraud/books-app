@@ -1,0 +1,58 @@
+.wrapper
+  width: 100%
+  max-width: 1280px
+  margin: 0 auto
+  @include display-flex(column, center, center)
+  gap: toEm(30)
+  
+  @include media-query(1340px)
+    padding: 0 20px
+    max-width: 100%
+
+.title
+  font-family: $titleFont
+  font-size: toRem(60)
+  
+  @include media-query(660px)
+    font-size: toRem(42)
+
+.subtitle
+  font-family: $titleFont
+  font-size: toRem(22)
+  font-weight: 400
+
+  @include media-query(660px)
+    font-size: toRem(18)
+
+.text
+  font-family: $textFont
+  font-size: toRem(18)
+
+  @include media-query(660px)
+    font-size: toRem(16)
+
+.curved-underline
+  text-decoration: none
+  position: relative
+  transition: .2s ease-in-out
+
+  &:hover
+    color: $secondaryColor
+
+    &:after
+      background-color: $secondaryColor
+
+  &:after
+    content: ''
+    position: absolute
+    top: 106%
+    left: 0
+    height: toRem(3)
+    width: 100%
+    background-color: $primaryColor
+    border-radius: 100% 100% 0 0
+    transition: .2s ease-in-out
+
+  
+.display-none
+  display: none

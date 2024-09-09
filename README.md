@@ -1,9 +1,5 @@
 ## A Books App
 
-##### Use of APIs
-##### Search system (coming)
-##### Filtering system (coming)
+### Get a random (genre based) selection of4 books and send it to you and/or a or multiple friends with a personalized message
 
-###### React JS, API GoodReads & Amazon
-
-By Florence B
+###### ReactJs, TypeScript, Gsap & API Gutenberg Books
